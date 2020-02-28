@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
-import {Route, Link} from "react-router-dom";
+import {Route, NavLink} from "react-router-dom";
 import Course from "./containers/Course/Course";
 
 
@@ -23,10 +23,10 @@ class App extends Component {
                 <nav>
                     <ul style={{listStyle: 'none', margin: 'auto', padding: '0'}}>
                         <li style={{margin: '10px', display: 'inline-block'}}>
-                            <Link to="/courses">Courses</Link>
+                            <NavLink to="/courses">Courses</NavLink>
                         </li>
                         <li style={{margin: '10px', display: 'inline-block'}}>
-                            <Link to="/users">Users</Link>
+                            <NavLink to="/users">Users</NavLink>
                         </li>
                     </ul>
                 </nav>
