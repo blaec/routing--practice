@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
-import {Route} from "react-router-dom";
+import {Route, Link} from "react-router-dom";
 import Course from "./containers/Course/Course";
 
 
@@ -10,19 +10,6 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header>
-                    <nav>
-                        <table style={{margin: 'auto'}}>
-                            <tbody>
-                            <tr>
-                                <th><a href="/users">Users</a></th>
-                                <th><a href="/courses">Courses</a></th>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </nav>
-                </header>
-
                 <ol style={{textAlign: 'left'}}>
                     <li>Add Routes to load "Users" and "Courses" on different pages (by entering a URL, without Links)</li>
                     <li>Add a simple navigation with two links => One leading to "Users", one leading to "Courses"</li>
@@ -33,6 +20,16 @@ class App extends Component {
                     <li>Add a 404 error page and render it for any unknown routes</li>
                     <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
                 </ol>
+                <nav>
+                    <ul style={{listStyle: 'none', margin: 'auto', padding: '0'}}>
+                        <li style={{margin: '10px', display: 'inline-block'}}>
+                            <Link to="/courses">Courses</Link>
+                        </li>
+                        <li style={{margin: '10px', display: 'inline-block'}}>
+                            <Link to="/users">Users</Link>
+                        </li>
+                    </ul>
+                </nav>
 
                 <Route path="/users" component={Users}/>
                 <Route path="/courses" exact component={Courses}/>
