@@ -1,0 +1,7 @@
+/node_modules/
+.idea
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/routing--assignment-problem.iml
+/.idea/vcs.xml
