@@ -13,3 +13,10 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.Course:hover {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
