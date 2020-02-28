@@ -4,6 +4,7 @@ import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
 import {Route, NavLink, Switch} from "react-router-dom";
 import Course from "./containers/Course/Course";
+import NoMatch from "./component/NoMatch/NoMatch";
 
 
 class App extends Component {
@@ -34,7 +35,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/users" component={Users}/>
                     <Route path="/courses" component={Courses}/>
-                    <Route render={() => <h1>Not found</h1>}/>
+                    <Route component={NoMatch}/>
                     {/*<Route path="/courses/:id" component={Course}/>*/}
                 </Switch>
             </div>
