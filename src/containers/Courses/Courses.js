@@ -13,10 +13,6 @@ class Courses extends Component {
         ]
     };
 
-    courseClickHandler = (id) => {
-        console.log("clicked course: " + id);
-    };
-
     render() {
         return (
             <div>
@@ -25,9 +21,13 @@ class Courses extends Component {
                     {
                         this.state.courses.map(course => {
                             return (
-                                <Link to={'/courses/' + course.id} key={course.id}>
-                                    <article className="Course"
-                                             onClick={() => this.courseClickHandler(course.id)}>
+                                <Link to={
+                                    {
+                                        pathname: '/courses/' + course.id,
+                                        state: {title: course.title}
+                                    }}
+                                      key={course.id}>
+                                    <article className="Course">
                                         {course.title}
                                     </article>
                                 </Link>
